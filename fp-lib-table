@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name SimpleControl_Hardware)(type KiCad)(uri ${KIPRJMOD}/lib/SimpleControl_Hardware.pretty)(options "")(descr ""))
+)
