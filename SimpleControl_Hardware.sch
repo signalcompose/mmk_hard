@@ -20,7 +20,7 @@ U 1 1 5DE0C6B6
 P 11200 4650
 F 0 "U1" H 11200 5600 50  0000 C CNN
 F 1 "MCP3208" H 11200 5500 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 11300 4750 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 11300 4750 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf" H 11300 4750 50  0001 C CNN
 	1    11200 4650
 	-1   0    0    -1  
@@ -222,9 +222,9 @@ $EndComp
 Wire Wire Line
 	1750 3100 1750 2950
 Wire Wire Line
-	1750 3100 2650 3100
+	1750 3100 1950 3100
 Wire Wire Line
-	2650 3200 1500 3200
+	2650 3200 1950 3200
 Wire Wire Line
 	1500 3200 1500 2950
 Text GLabel 1300 3100 0    50   BiDi ~ 0
@@ -329,7 +329,7 @@ U 1 1 5DE412CE
 P 13950 1300
 F 0 "J2" H 13670 1233 50  0000 R CNN
 F 1 "AudioJack3" H 13670 1324 50  0000 R CNN
-F 2 "SimpleControl_Hardware:CUI_SJ-3523-SMT-TR" H 13950 1300 50  0001 C CNN
+F 2 "SimpleControl_Hardware:CUI_SJ-3523-SMT-TR_TRS" H 13950 1300 50  0001 C CNN
 F 3 "~" H 13950 1300 50  0001 C CNN
 	1    13950 1300
 	-1   0    0    1   
@@ -515,12 +515,6 @@ Text GLabel 14400 6750 2    50   Output ~ 0
 CS_0
 Wire Wire Line
 	14400 6750 14350 6750
-Text GLabel 4050 3600 2    50   Input ~ 0
-MISO
-Text GLabel 4050 3700 2    50   Output ~ 0
-MOSI
-Text GLabel 4050 3500 2    50   Output ~ 0
-SCK
 $Comp
 L Device:C C2
 U 1 1 5DE99901
@@ -734,7 +728,7 @@ U 1 1 5DECD8EF
 P 5300 3400
 F 0 "S1" V 5247 3538 60  0000 L CNN
 F 1 "B3U-1000P" V 5353 3538 60  0000 L CNN
-F 2 "digikey-footprints:Switch_Tactile_SMD_B3U-1000P" H 5500 3600 60  0001 L CNN
+F 2 "SimpleControl_Hardware:SW_Tactile_Akizuki" H 5500 3600 60  0001 L CNN
 F 3 "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf" H 5500 3700 60  0001 L CNN
 F 4 "SW1020CT-ND" H 5500 3800 60  0001 L CNN "Digi-Key_PN"
 F 5 "B3U-1000P" H 5500 3900 60  0001 L CNN "MPN"
@@ -1421,6 +1415,197 @@ F 3 "~" H 1750 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 1500 1450 1500
+	1750 1500 1650 1500
 Connection ~ 1450 1500
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5DEB79E6
+P 1950 3100
+F 0 "TP2" H 1950 3450 50  0000 L CNN
+F 1 "TestPoint" H 1950 3350 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2150 3100 50  0001 C CNN
+F 3 "~" H 2150 3100 50  0001 C CNN
+	1    1950 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 3100
+Wire Wire Line
+	1950 3100 2650 3100
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5DEB8D26
+P 1950 3200
+F 0 "TP3" H 2150 3350 50  0000 R CNN
+F 1 "TestPoint" H 2200 3450 50  0000 R CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2150 3200 50  0001 C CNN
+F 3 "~" H 2150 3200 50  0001 C CNN
+	1    1950 3200
+	-1   0    0    1   
+$EndComp
+Connection ~ 1950 3200
+Wire Wire Line
+	1950 3200 1500 3200
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5DEBA08B
+P 1650 1500
+F 0 "TP1" H 1600 1700 50  0000 R CNN
+F 1 "TestPoint" H 1600 1750 50  0000 R CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 1850 1500 50  0001 C CNN
+F 3 "~" H 1850 1500 50  0001 C CNN
+	1    1650 1500
+	-1   0    0    1   
+$EndComp
+Connection ~ 1650 1500
+Wire Wire Line
+	1650 1500 1450 1500
+Text GLabel 4050 3500 2    50   Output ~ 0
+SCK
+Text GLabel 4050 3700 2    50   Output ~ 0
+MOSI
+Text GLabel 4050 3600 2    50   Input ~ 0
+MISO
+Text GLabel 9250 4350 0    50   Input ~ 0
+SCK
+Text GLabel 9250 4600 0    50   Input ~ 0
+MISO
+Text GLabel 9250 4850 0    50   Input ~ 0
+MOSI
+Text GLabel 9250 5100 0    50   Input ~ 0
+CS_0
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5DEC29B7
+P 9250 4350
+F 0 "TP4" V 9204 4538 50  0000 L CNN
+F 1 "TestPoint" V 9295 4538 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 9450 4350 50  0001 C CNN
+F 3 "~" H 9450 4350 50  0001 C CNN
+	1    9250 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5DEC4003
+P 9250 4600
+F 0 "TP6" V 9204 4788 50  0000 L CNN
+F 1 "TestPoint" V 9295 4788 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 9450 4600 50  0001 C CNN
+F 3 "~" H 9450 4600 50  0001 C CNN
+	1    9250 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5DEC43C9
+P 9250 4850
+F 0 "TP8" V 9204 5038 50  0000 L CNN
+F 1 "TestPoint" V 9295 5038 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 9450 4850 50  0001 C CNN
+F 3 "~" H 9450 4850 50  0001 C CNN
+	1    9250 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5DEC477B
+P 9250 5100
+F 0 "TP10" V 9204 5288 50  0000 L CNN
+F 1 "TestPoint" V 9295 5288 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 9450 5100 50  0001 C CNN
+F 3 "~" H 9450 5100 50  0001 C CNN
+	1    9250 5100
+	0    1    1    0   
+$EndComp
+Text GLabel 2100 4750 0    50   Input ~ 0
+DECODER_A0
+Text GLabel 2100 5050 0    50   Input ~ 0
+DECODER_A1
+Text GLabel 2100 5350 0    50   Input ~ 0
+DECODER_A2
+Text GLabel 2100 5650 0    50   Input ~ 0
+DECODER_A3
+Text GLabel 2100 5950 0    50   Input ~ 0
+DECODER_EN0
+Text GLabel 2100 6200 0    50   Input ~ 0
+DECODER_EN1
+Text GLabel 2100 4500 0    50   Input ~ 0
+DECODER_A0
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5DEDEFC3
+P 2100 4500
+F 0 "TP5" V 2054 4688 50  0000 L CNN
+F 1 "TestPoint" V 2145 4688 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 4500 50  0001 C CNN
+F 3 "~" H 2300 4500 50  0001 C CNN
+	1    2100 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5DEDFBBC
+P 2100 4750
+F 0 "TP7" V 2054 4938 50  0000 L CNN
+F 1 "TestPoint" V 2145 4938 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 4750 50  0001 C CNN
+F 3 "~" H 2300 4750 50  0001 C CNN
+	1    2100 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5DEDFE2A
+P 2100 5050
+F 0 "TP9" V 2054 5238 50  0000 L CNN
+F 1 "TestPoint" V 2145 5238 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 5050 50  0001 C CNN
+F 3 "~" H 2300 5050 50  0001 C CNN
+	1    2100 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP11
+U 1 1 5DEE032B
+P 2100 5350
+F 0 "TP11" V 2054 5538 50  0000 L CNN
+F 1 "TestPoint" V 2145 5538 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 5350 50  0001 C CNN
+F 3 "~" H 2300 5350 50  0001 C CNN
+	1    2100 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP12
+U 1 1 5DEE077B
+P 2100 5650
+F 0 "TP12" V 2054 5838 50  0000 L CNN
+F 1 "TestPoint" V 2145 5838 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 5650 50  0001 C CNN
+F 3 "~" H 2300 5650 50  0001 C CNN
+	1    2100 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP13
+U 1 1 5DEE0C4A
+P 2100 5950
+F 0 "TP13" V 2054 6138 50  0000 L CNN
+F 1 "TestPoint" V 2145 6138 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 5950 50  0001 C CNN
+F 3 "~" H 2300 5950 50  0001 C CNN
+	1    2100 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP14
+U 1 1 5DEE0F8D
+P 2100 6200
+F 0 "TP14" V 2054 6388 50  0000 L CNN
+F 1 "TestPoint" V 2145 6388 50  0000 L CNN
+F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 6200 50  0001 C CNN
+F 3 "~" H 2300 6200 50  0001 C CNN
+	1    2100 6200
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
