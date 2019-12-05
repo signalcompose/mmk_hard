@@ -753,17 +753,6 @@ F 3 "" H 5300 3800 50  0001 C CNN
 	1    5300 3800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R4
-U 1 1 5DEDC536
-P 5300 3050
-F 0 "R4" H 5370 3096 50  0000 L CNN
-F 1 "10k" H 5370 3005 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 5230 3050 50  0001 C CNN
-F 3 "~" H 5300 3050 50  0001 C CNN
-	1    5300 3050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5300 3600 5300 3800
 $Comp
@@ -1529,19 +1518,6 @@ Text GLabel 2100 5950 0    50   Input ~ 0
 DECODER_EN0
 Text GLabel 2100 6200 0    50   Input ~ 0
 DECODER_EN1
-Text GLabel 2100 4500 0    50   Input ~ 0
-DECODER_A0
-$Comp
-L Connector:TestPoint TP5
-U 1 1 5DEDEFC3
-P 2100 4500
-F 0 "TP5" V 2054 4688 50  0000 L CNN
-F 1 "TestPoint" V 2145 4688 50  0000 L CNN
-F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 4500 50  0001 C CNN
-F 3 "~" H 2300 4500 50  0001 C CNN
-	1    2100 4500
-	0    1    1    0   
-$EndComp
 $Comp
 L Connector:TestPoint TP7
 U 1 1 5DEDFBBC
@@ -1607,5 +1583,51 @@ F 2 "SimpleControl_Hardware:TP_1PAD" H 2300 6200 50  0001 C CNN
 F 3 "~" H 2300 6200 50  0001 C CNN
 	1    2100 6200
 	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 2900 5300 3200
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DF0F4C2
+P 14950 4650
+F 0 "H1" H 15050 4696 50  0000 L CNN
+F 1 "MountingHole" H 15050 4605 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 14950 4650 50  0001 C CNN
+F 3 "~" H 14950 4650 50  0001 C CNN
+	1    14950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5DF0FF46
+P 14950 4900
+F 0 "H2" H 15050 4946 50  0000 L CNN
+F 1 "MountingHole" H 15050 4855 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 14950 4900 50  0001 C CNN
+F 3 "~" H 14950 4900 50  0001 C CNN
+	1    14950 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5DF10415
+P 14950 5150
+F 0 "H3" H 15050 5196 50  0000 L CNN
+F 1 "MountingHole" H 15050 5105 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 14950 5150 50  0001 C CNN
+F 3 "~" H 14950 5150 50  0001 C CNN
+	1    14950 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5DF10B22
+P 14950 5400
+F 0 "H4" H 15050 5446 50  0000 L CNN
+F 1 "MountingHole" H 15050 5355 50  0000 L CNN
+F 2 "Mounting_Holes:MountingHole_3.2mm_M3_DIN965_Pad" H 14950 5400 50  0001 C CNN
+F 3 "~" H 14950 5400 50  0001 C CNN
+	1    14950 5400
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
